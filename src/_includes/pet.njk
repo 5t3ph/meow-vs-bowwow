@@ -1,0 +1,16 @@
+---
+layout: base.njk
+---
+<img src="{{ photoURL }}" />
+
+<ul>
+<li><strong>Name</strong>: {{ title }}</li>
+<li><strong>Color</strong>: {{ petColor }}</li>
+<li><strong>Favorite Food</strong>: {{ favoriteFood if favoriteFood else 'N/A' }}</li>
+<li><strong>Favorite Toy</strong>: {{ favoriteToy if favoriteToy else 'N/A' }}</li>
+{% if ownerTwitter %}
+<li><strong>Owner</strong>: <a href="{{ ownerTwitter }}">{{ ownerName }}</a></li>
+{% else %}
+<li><strong>Owner</strong>: {{ ownerName }}</li>
+{% endif %}
+</ul>

@@ -1,0 +1,53 @@
+---
+layout: base.njk
+title: 😺 Meow vs. BowWow 🐶
+---
+
+<article class="battle">
+  <h2>⚡️ Weekly Battle ⚡️</h2>
+
+  <div class="columns">
+    <figure>
+      {% for cat in cats | randomPet %}
+      <a href="/cats/{{ cat.name | slug }}/"
+        ><img alt="" src="{{ cat.photoURL }}" height="300"
+      /></a>
+      <figcaption>{{ cat.name }}</figcaption>
+      {% endfor %}
+    </figure>
+    <figure>
+      {% for dog in dogs | randomPet %}
+      <a href="/dogs/{{ dog.name | slug }}/"
+        ><img alt="" src="{{ dog.photoURL }}" height="300"
+      /></a>
+      <figcaption>{{ dog.name }}</figcaption>
+      {% endfor %}
+    </figure>
+  </div>
+</article>
+
+<aside class="columns">
+  <div>
+    <h3>All Cats</h3>
+
+    <ul>
+      {% for cat in cats %}
+      <li>
+        <a href="/cats/{{ cat.name | slug }}/">{{ cat.name }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div>
+    <h3>All Dogs</h3>
+
+    <ul>
+      {% for dog in dogs %}
+      <li>
+        <a href="/dogs/{{ dog.name | slug }}/">{{ dog.name }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</aside>
