@@ -7,10 +7,12 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background: skyblue;
   background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%237AB9D6' fill-opacity='0.4'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  min-height: 100vh;
   display: grid;
-  place-content: center;
+  grid-template-rows: auto 1fr auto;
   grid-gap: 1rem;
-  padding: 1rem;
+  padding: 0;
+  margin: 0;
 }
 
 body,
@@ -53,6 +55,7 @@ li strong {
 h1 {
   font-size: 6rem;
   font-size: clamp(2.5rem, 5vw, 5rem);
+  line-height: 1;
 }
 
 h2 {
@@ -71,7 +74,8 @@ h3 {
   margin: 0 1rem;
 }
 
-main {
+main,
+.container {
   width: 80ch;
   max-width: calc(100vw - 2rem);
   margin: 0 auto;
@@ -84,9 +88,9 @@ main {
 
 img {
   display: block;
-  width: 100%;
-  max-width: 300px;
-  height: auto;
+  width: 300px;
+  max-width: 100%;
+  height: 300px;
   margin: 0 auto;
   object-fit: cover;
   border-radius: 25%;
@@ -118,5 +122,29 @@ li + li {
 }
 
 .battle {
-  margin: 5vh auto;
+  margin: 0 auto 5vh;
+}
+
+footer {
+  width: 100vw;
+  text-align: center;
+  background-color: #c72c36;
+  color: #fff;
+  padding: 1rem;
+}
+
+footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+footer h4,
+footer p {
+  margin: 0.25rem;
+}
+
+footer a {
+  color: inherit;
 }

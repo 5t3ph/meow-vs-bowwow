@@ -1,6 +1,6 @@
 # 😺 Meow vs. BowWow 🐶
 
-> An example of essential and suggested 11ty features for creating a community-driven site.
+> An example of essential and suggested Eleventy (11ty) features for creating a community-driven site.
 
 Created by Stephanie Eckles ([@5t3ph](https://twitter.com/5t3ph))
 
@@ -8,11 +8,11 @@ Created by Stephanie Eckles ([@5t3ph](https://twitter.com/5t3ph))
 
 To submit your pet, create pull request with that includes a new `.json` file named after your pet in the appropriate directory, either `cats` or `dogs`:
 
-```bash
+```
 src/
   pets/
-	  cats/
-		dogs/
+    cats/
+    dogs/
 ```
 
 The `json` file contents should follow the schema below. You must provide a full URL to the photo of your pet as image uploads will not be accepted.
