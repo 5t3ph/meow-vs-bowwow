@@ -1,0 +1,14 @@
+---
+pagination:
+  data: stacks
+  alias: stack
+  size: 1
+eleventyComputed:
+  title: "{{ stack.title }}"
+  author: "{{ stack.author }}"
+  twitter: "{{ stack.twitter }}"
+  websiteTitle: "{{ stack.websiteTitle }}"
+  websiteUrl: "{{ stack.websiteUrl }}"
+layout: stack.njk
+permalink: "/stacks/{{ stack.title | slug }}/"
+---

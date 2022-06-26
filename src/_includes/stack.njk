@@ -1,0 +1,55 @@
+---
+layout: base.njk
+---
+
+<ul>
+  <li>
+    <strong>Author</strong>: {{ author }}
+  </li>
+  <ul>
+    {% for key, value in stack %}
+      <li>
+        {% if loop.last or key === 'stack' or key === 'techStack' %}
+          <strong>{{ key }}:</strong>
+          <ul>
+            {% for layer, technologies in stack[key] %}
+              <li>
+                <strong>{{ layer }}:</strong>
+                {{ technologies | join(", ") }}
+              </li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <strong>{{ key }}:</strong>
+          {{ value }}
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</ul>
+
+{# {
+  "title": "Tesla Test",
+  "author": "Sir Elon",
+  "twitter": "toysoldier182",
+  "websiteTitle": "juancarlosasensio.com",
+  "websiteUrl": "https://juancarlosasensio.netlify.app/",
+  "stack": {
+    "interior": [
+      "Aluminum",
+      "Leather"
+    ],
+    "exterior": [
+      "Aluminum",
+      "Glass"
+    ],
+    "power": [
+      "Drive train",
+      "Tesla battery"
+    ],
+    "software": [
+      "JavaScript",
+      "C++"
+    ]
+  }
+} #}

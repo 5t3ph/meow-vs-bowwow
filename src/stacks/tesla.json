@@ -1,0 +1,25 @@
+{
+  "title": "Tesla Test",
+  "author": "Sir Elon",
+  "twitter": "toysoldier182",
+  "websiteTitle": "juancarlosasensio.com",
+  "websiteUrl": "https://juancarlosasensio.netlify.app/",
+  "techStack": {
+    "interior": [
+      "Aluminum",
+      "Leather"
+    ],
+    "exterior": [
+      "Aluminum",
+      "Glass"
+    ],
+    "power": [
+      "Drive train",
+      "Tesla battery"
+    ],
+    "software": [
+      "JavaScript",
+      "C++"
+    ]
+  }
+}

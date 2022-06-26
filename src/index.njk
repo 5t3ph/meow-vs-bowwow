@@ -1,53 +1,49 @@
 ---
 layout: base.njk
-title: 😺 Meow vs. BowWow 🐶
+title: Planet Stacks
 ---
 
 <article class="battle">
-  <h2>⚡️ Weekly Battle ⚡️</h2>
-
+  <h2>⚡️ Weekly Highlights of how stuff is built and how it functions ⚡️</h2>
   <div class="columns">
-    <figure>
-      {% for cat in cats | randomPet %}
-      <a href="/cats/{{ cat.name | slug }}/"
-        ><img alt="" src="{{ cat.photoURL }}" height="300"
-      /></a>
-      <figcaption>{{ cat.name }}</figcaption>
+    <ul>
+      {% for stack in stacks | randomStack %}
+        <li>
+          <h4>{{ stack.title }}</h4>
+          <ul>
+            {# Figure out how to do a nested iteration over item, which is an array #}
+            {% for layer, items in stack.techStack %}
+              <li>{{ layer }}: {{ items }}</li>
+            {% endfor %}
+          </ul>
+        </li>
       {% endfor %}
-    </figure>
-    <figure>
-      {% for dog in dogs | randomPet %}
-      <a href="/dogs/{{ dog.name | slug }}/"
-        ><img alt="" src="{{ dog.photoURL }}" height="300"
-      /></a>
-      <figcaption>{{ dog.name }}</figcaption>
-      {% endfor %}
-    </figure>
+    </ul>
   </div>
 </article>
 
-<aside class="columns">
-  <div>
-    <h3>All Cats</h3>
-
-    <ul>
-      {% for cat in cats %}
-      <li>
-        <a href="/cats/{{ cat.name | slug }}/">{{ cat.name }}</a>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-
-  <div>
-    <h3>All Dogs</h3>
-
-    <ul>
-      {% for dog in dogs %}
-      <li>
-        <a href="/dogs/{{ dog.name | slug }}/">{{ dog.name }}</a>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-</aside>
+{# {
+  "title": "Tesla Stack Test",
+  "author": "Sir Elon",
+  "twitter": "toysoldier182",
+  "websiteTitle": "juancarlosasensio.com",
+  "websiteUrl": "https://juancarlosasensio.netlify.app/",
+  "stack": {
+    "interior": [
+      "Aluminum",
+      "Leather"
+    ],
+    "exterior": [
+      "Aluminum",
+      "Glass"
+    ],
+    "power": [
+      "Drive train",
+      "Tesla battery"
+    ],
+    "software": [
+      "JavaScript",
+      "C++"
+    ]
+  }
+} #}

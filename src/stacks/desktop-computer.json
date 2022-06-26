@@ -1,0 +1,28 @@
+{
+  "title": "Desktop Computer Test",
+  "author": "Steven William Wozniaki",
+  "twitter": "stevebillwoz",
+  "websiteTitle": "stevebillwoz.com",
+  "websiteUrl": "https://stevebillwoz.netlify.app/",
+  "techStack": {
+    "processing": [
+      "CPU",
+      "Motherboard"
+    ],
+    "storage": [
+      "RAM",
+      "Flash Memory"
+    ],
+    "display": [
+      "Monitor"
+    ],
+    "inputs": [
+      "Keyboard",
+      "Mouse",
+      "Terminal"
+    ],
+    "software": [
+      "OSS"
+    ]
+  }
+}
