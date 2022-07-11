@@ -1,31 +1,19 @@
 ---
 layout: base.njk
-title: Planet Stacks
+title: About This Project
 ---
 
 <article class="battle">
-  <h2>⚡️ Weekly Highlight ⚡️</h2>
-  <div class="columns">
-    <ul>
-      {% for stack in stacks | randomStack %}
-        <li>
-          <h4>{{ stack.title }}</h4>
-          <ul>
-            {# Figure out how to do a nested iteration over item, which is an array #}
-            {% for layer, items in stack.techStack %}
-              <li>{{ layer }}: {{ items }}</li>
-            {% endfor %}
-          </ul>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
+  <h2>Crowdsourced technology stacks</h2>
   <div>
     <p>
-      <a href="/about">About the project</a>
+      The goal is to allow subject-matter experts in their fields submit technology stacks for interesting projects.
     </p>
     <p>
-      View all stacks!
+      From dams and drones to vaccum cleaners and apps on your phone, there are many technologies, unbeknownst to most of us, involved in making the planet tick.
+    </p>
+    <p>
+      This project was hugely inspired by Stephanie Eckles, and much of the groundwork for this project itself was laid out by her.
     </p>
   </div>
 </article>
