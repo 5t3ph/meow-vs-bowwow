@@ -4,7 +4,7 @@ title: Planet Stacks
 ---
 
 <article class="battle">
-  <h2>⚡️ Weekly Highlights of how stuff is built and how it functions ⚡️</h2>
+  <h2>⚡️ Weekly Highlight ⚡️</h2>
   <div class="columns">
     <ul>
       {% for stack in stacks | randomStack %}
@@ -19,6 +19,20 @@ title: Planet Stacks
         </li>
       {% endfor %}
     </ul>
+  </div>
+  <div>
+    <p>
+      <a href="/about">About the project</a>
+    </p>
+    <p>
+      {% for stack in stacks | randomStack %}
+        {% if loop.first %}
+          {% set linkToStacks = stack.title %}
+        {% endif %}
+      {% endfor %}
+      {# How do I link to stacks without necesarilly knowing what the final page path will be? #}
+      <a href="/stacks/desktop-computer-test">View all stacks!</a>
+    </p>
   </div>
 </article>
 

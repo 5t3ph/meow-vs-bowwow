@@ -1,7 +1,7 @@
 {
-  "name": "11ty-basics",
+  "name": "planet-stacks",
   "version": "1.0.0",
-  "description": "Essential 11ty features for creating a community-driven site for collecting tech stacks.",
+  "description": "Essential technologies to make the planet tick.",
   "main": "index.js",
   "scripts": {
     "develop": "eleventy --serve",
