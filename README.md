@@ -1,18 +1,17 @@
-# 😺 Meow vs. BowWow 🐶
+# 🌍🤖 Planet Stacks 🤖🌍
 
-> An example of essential and suggested Eleventy (11ty) features for creating a community-driven site.
+> A community-driven site with tech stacks for all sorts of curious and wonderful things.
 
-Created by Stephanie Eckles ([@5t3ph](https://twitter.com/5t3ph))
+Created by Juan Carlos Asensio ([@toysoldier182](https://twitter.com/toysoldier182)), inspired by the ever-amazing Stephanie Eckles ([@St3ph](https://twitter.com/st3ph))
 
-## Add Your Dog or Cat
+## Add Your Stack
 
-To submit your pet, create pull request with that includes a new `.json` file named after your pet in the appropriate directory, either `cats` or `dogs`:
+To submit your stack, create pull request with that includes a new `.json` file named after your stack in the appropriate directory `src/_data/stacks`:
 
 ```
 src/
-  pets/
-    cats/
-    dogs/
+  _data_/
+    stacks/
 ```
 
 The `json` file contents should follow the schema below. You must provide a full URL to the photo of your pet as image uploads will not be accepted.
@@ -20,14 +19,29 @@ The `json` file contents should follow the schema below. You must provide a full
 ```json
 {
   // Required
-  "name": "Fluffy",
-  "petColor": "orange",
-  "photoURL": "http://placekitten.com/320",
-  "ownerName": "Bob",
+  "title": "Tesla Test",
+  "author": "Melon Lust",
+  "techStack": {
+    "interior": [
+      "Aluminum",
+      "Leather"
+    ],
+    "exterior": [
+      "Aluminum",
+      "Glass"
+    ],
+    "power": [
+      "Drive train",
+      "Tesla battery"
+    ],
+    "software": [
+      "JavaScript",
+      "C++"
+    ]
+  }, 
   // Optional
-  "favoriteFood": "FancyFeast",
-  "favoriteToy": "squeaky mouse",
-  "ownerTwitter": "#"
+  "twitter": "FancyFeast",
+  "websiteUrl": "squeaky mouse"
 }
 ```
 
@@ -36,3 +50,8 @@ The `json` file contents should follow the schema below. You must provide a full
 You can [file it as an issue](https://github.com/5t3ph/stylestage/issues).
 
 [![Buy me a coffee](https://cdn.buymeacoffee.com/buttons/default-violet.png)](https://www.buymeacoffee.com/moderncss)
+
+
+## Useful resources
+
+- 11ty Pagination: https://11ty.recipes/recipes/add-pagination/

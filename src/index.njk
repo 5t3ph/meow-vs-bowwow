@@ -25,7 +25,13 @@ title: Planet Stacks
       <a href="/about">About the project</a>
     </p>
     <p>
-      View all stacks!
+      {% for stack in stacks | randomStack %}
+        {% if loop.first %}
+          {% set linkToStacks = stack.title %}
+        {% endif %}
+      {% endfor %}
+      {# How do I link to stacks without necesarilly knowing what the final page path will be? #}
+      <a href="/stacks/desktop-computer-test">View all stacks!</a>
     </p>
   </div>
 </article>
