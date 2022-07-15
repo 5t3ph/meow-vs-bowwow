@@ -4,8 +4,8 @@
   "description": "Essential technologies to make the planet tick.",
   "main": "index.js",
   "scripts": {
-    "develop": "eleventy --serve",
-    "build": "eleventy"
+    "develop": "npx @11ty/eleventy --serve",
+    "build": "NODE_ENV=production npx @11ty/eleventy"
   },
   "repository": {
     "type": "git",
@@ -13,10 +13,8 @@
   },
   "author": "Juan Carlos Asensio",
   "license": "ISC",
-  "dependencies": {
-    "@11ty/eleventy": "^0.11.0"
-  },
   "devDependencies": {
+    "@11ty/eleventy": "^1.0.1",
     "fast-glob": "^3.2.4"
   }
 }
