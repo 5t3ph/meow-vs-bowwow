@@ -3,7 +3,7 @@ module.exports = function (eleventyConfig) {
 
   // Borrowed from the official 11ty site .eleventy.js
   // @link https://github.com/11ty/11ty-website/blob/master/.eleventy.js
-  eleventyConfig.addFilter("randomStack", (arr) => {
+  eleventyConfig.addFilter("randomItem", (arr) => {
     if (Array.isArray(arr)) {
       const random = arr[Math.floor(Math.random() * arr.length)];
       return [random];
@@ -11,12 +11,11 @@ module.exports = function (eleventyConfig) {
     return [];
   });
 
-  eleventyConfig.addFilter("getKeys", (obj) => {
-      const keys = Object.keys(obj)
-      return keys.length !== 0 ? keys : ["not", "yo", "mama"]
-  })
-
   return {
+    // Pre-process *.md files with: (default: `liquid`)
+    markdownTemplateEngine: "njk",
+    // Pre-process *.html files with: (default: `liquid`)
+    htmlTemplateEngine: "njk",
     dir: {
       input: "src",
       output: "public",

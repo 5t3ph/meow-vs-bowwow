@@ -4,7 +4,7 @@
   "description": "Essential technologies to make the planet tick.",
   "main": "index.js",
   "scripts": {
-    "develop": "npx @11ty/eleventy --serve",
+    "dev": "npx @11ty/eleventy --serve",
     "build": "NODE_ENV=production npx @11ty/eleventy"
   },
   "repository": {

@@ -1,7 +1,10 @@
-let data = {};
+let data = {
+  "tags": ["stacks", "stack"],
+  "date": ""
+};
 
 if (process.env.NODE_ENV === "production") {
-	data.date = "Last Modified";
+	data['date'] = "git Last Modified";
 }
 
 module.exports = data;
