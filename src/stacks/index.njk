@@ -4,45 +4,12 @@ title: All Stacks
 eleventyExcludeFromCollections: true
 ---
 
-<article class="battle">
-  <h2>{{title}}</h2>
-  <div class="columns">
-    {# Loop through stacks collection... #}
-    <ul>
-      {% for stack in stacks %}
+<article>
+  <ul>
+    {% for stack in stacks %}
+      <li>
         <a href="{{stack.title | slug}}">{{stack.title}}</a>
-      {% endfor %}
-    </ul>
-  </div>
-  <div>
-    <p>
-      <a href="/about">About the project</a>
-    </p>
-  </div>
+      </li>
+    {% endfor %}
+  </ul>
 </article>
-
-{# {
-  "title": "Tesla Stack Test",
-  "author": "Sir Elon",
-  "twitter": "toysoldier182",
-  "websiteTitle": "juancarlosasensio.com",
-  "websiteUrl": "https://juancarlosasensio.netlify.app/",
-  "stack": {
-    "interior": [
-      "Aluminum",
-      "Leather"
-    ],
-    "exterior": [
-      "Aluminum",
-      "Glass"
-    ],
-    "power": [
-      "Drive train",
-      "Tesla battery"
-    ],
-    "software": [
-      "JavaScript",
-      "C++"
-    ]
-  }
-} #}

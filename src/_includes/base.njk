@@ -5,26 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
     <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/css/variables.css"/>
+    <link rel="stylesheet" href="/css/utilities.css"/>
+    <link rel="stylesheet" href="/css/styles.css"/>
   </head>
-  <body>
-    <header>
-      <h1>{{ title }}</h1>
-      {% if page.url !== '/' %}
-        <h2>
-          <a href="/">🌍🤖 Planet Stacks 🤖🌍</a>
-        </h2>
-      {% endif %}
-    </header>
-    <main>
-      {{ content | safe }}
-    </main>
-    <footer>
-      <div class="container">
-        <h4>Add Your Stack!</h4>
-        <p>Learn how to contribute your stack by <a href="https://github.com/juancarlosasensio/planet-stack" target="_blank">visiting the repo ></a>
-        </p>
-      </div>
-    </footer>
+
+  <body class="page-container">
+    <center-l max="var(--measure)">
+      <stack-l space="var(--s3)" class="content-container">
+        {# header... #}
+        <header>
+          <center-l max="var(--measure)" andText gutters>
+            <h1>{{ title }}</h1>
+          </center-l>
+        </header>
+        {# horizontally-and-vertically-centered el... #}
+        <main>
+          {{ content | safe }}
+        </main>
+      </stack-l>
+    </center-l>
+    {% include "footer.njk" %}
+    <script src="{{ '/js/main.js' | url }}" type="text/javascript"></script>
   </body>
 </html>

@@ -1,0 +1,168 @@
+:root {
+  /*  Fonts  */
+  --font-plain: Helvetica Neue, Helvetica, Arial, sans-serif;
+  --font-special: Barlow Condensed, Helvetica, sans-serif;
+  --font-mono: Menlo, Courier, Courier New, Andale Mono, monospace;
+  /*  Colors  */
+  --color-dark: #050505;
+  --color-darkish: #404040;
+  --color-lightish: #e6e6e6;
+  --color-light: #fafafa;
+  --color-mid: grey;
+  --black: #080818;
+  --white: #FEEEEF;
+  --bg-white: #F7F7E7;
+  --yellow: #F3EDA7;
+  --lemon-yellow: #FCFDAF;
+  --dark-green: #015565;
+  --darker-green: #093F33;
+  --aqua: #00FFFf;
+  --bright-green: #BCFFCF;
+  --neon-green: #B3F2C3;
+  --light-grey: #CDEEEE;
+  --pink: #EE77BB;
+  --dark-pink: #F477BD;
+  --bright-pink: #FF0299;
+  --red: #c72c36;
+
+  /* Spacing */
+  --ratio: 1.4;
+  --s-5: calc(var(--s0)/var(--ratio)/var(--ratio)/var(--ratio)/var(--ratio)/var(--ratio));
+  --s-4: calc(var(--s0)/var(--ratio)/var(--ratio)/var(--ratio)/var(--ratio));
+  --s-3: calc(var(--s0)/var(--ratio)/var(--ratio)/var(--ratio));
+  --s-2: calc(var(--s0)/var(--ratio)/var(--ratio));
+  --s-1: calc(var(--s0)/var(--ratio));
+  --s0: 1rem;
+  --s1: calc(var(--s0)*var(--ratio));
+  --s2: calc(var(--s0)*var(--ratio)*var(--ratio));
+  --s3: calc(var(--s0)*var(--ratio)*var(--ratio)*var(--ratio));
+  --s4: calc(var(--s0)*var(--ratio)*var(--ratio)*var(--ratio)*var(--ratio));
+  --s5: calc(var(--s0)*var(--ratio)*var(--ratio)*var(--ratio)*var(--ratio)*var(--ratio));
+
+  /* Typography-related styles */
+  --measure: 65ch;
+  --line-height: var(--ratio);
+  --line-height-small: calc(0.7*var(--ratio));
+  --border-thin: var(--s-5);
+  --border-thick: var(--s-2);
+}
+
+.red {
+  color: var(--red);
+}
+
+.bg-red {
+  background-color: var(--red);
+}
+
+.black {
+  color: var(--black);
+}
+
+.white {
+  color: var(--white);
+}
+
+.bg-white {
+  background-color: var(--bg-white);
+}
+
+.yellow {
+  color: var(--yellow);
+}
+
+.lemon-yellow {
+  color: var(--lemon-yellow);
+}
+
+.dark-green {
+  color: var(--dark-green);
+}
+
+.darker-green {
+  color: var(--darker-green);
+}
+
+.aqua {
+  color: var(--aqua);
+}
+
+.bright-green {
+  color: var(--bright-green);
+}
+
+.neon-green {
+  color: var(--neon-green);
+}
+
+.light-grey {
+  color: var(--light-grey);
+}
+
+.pink {
+  color: var(--pink);
+}
+
+.dark-pink {
+  color: var(--dark-pink);
+}
+
+.bright-pink {
+  color: var(--bright-pink);
+}
+
+.bg-black {
+  background-color: var(--black);
+}
+
+.bg-white {
+  background-color: var(--bg-white);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+.bg-yellow {
+  background-color: var(--yellow);
+}
+
+.bg-lemon-yellow {
+  background-color: var(--lemon-yellow);
+}
+
+.bg-dark-green {
+  background-color: var(--dark-green);
+}
+
+.bg-darker-green {
+  background-color: var(--darker-green);
+}
+
+.bg-aqua {
+  background-color: var(--aqua);
+}
+
+.bg-bright-green {
+  background-color: var(--bright-green);
+}
+
+.bg-neon-green {
+  background-color: var(--neon-green);
+}
+
+.bg-light-grey {
+  background-color: var(--light-grey);
+}
+
+.bg-pink {
+  background-color: var(--pink);
+}
+
+.bg-dark-pink {
+  background-color: var(--dark-pink);
+}
+
+.bg-bright-pink {
+  background-color: var(--bright-pink);
+}

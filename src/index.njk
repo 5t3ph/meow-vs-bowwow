@@ -3,61 +3,13 @@ layout: base.njk
 title: Planet Stacks
 ---
 
-<article class="battle">
-  <h2>⚡️ Weekly Highlight ⚡️</h2>
-  <div class="columns">
-    <ul>
-      {% for stack in stacks | randomItem %}
-        <li>
-          <h4>{{ stack.title }}</h4>
-          <ul>
-            {# Figure out how to do a nested iteration over item, which is an array #}
-            {% for layer, items in stack.techStack %}
-              <li>{{ layer }}: {{ items }}</li>
-            {% endfor %}
-          </ul>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-  <div>
-    <p>
-      <a href="/about">About the project</a>
-    </p>
-    <p>
-      {% for stack in stacks | randomItem %}
-        {% if loop.first %}
-          {% set linkToStacks = stack.title %}
-        {% endif %}
-      {% endfor %}
-      {# How do I link to stacks without necesarilly knowing what the final page path will be? #}
-      <a href="/stacks">View all stacks!</a>
-    </p>
-  </div>
+<article>
+  <stack-l space="var(--s3)" class="text-align:center">
+    <h2>⚡️ Weekly Highlight ⚡️</h2>
+    {% for stack in stacks | randomItem %}
+      <a href="/stacks/{{ stack.title | slug }}/">
+        <h4>{{ stack.title }}</h4>
+      </a>
+    {% endfor %}
+  </stack-l>
 </article>
-
-{# {
-  "title": "Tesla Stack Test",
-  "author": "Sir Elon",
-  "twitter": "toysoldier182",
-  "websiteTitle": "juancarlosasensio.com",
-  "websiteUrl": "https://juancarlosasensio.netlify.app/",
-  "stack": {
-    "interior": [
-      "Aluminum",
-      "Leather"
-    ],
-    "exterior": [
-      "Aluminum",
-      "Glass"
-    ],
-    "power": [
-      "Drive train",
-      "Tesla battery"
-    ],
-    "software": [
-      "JavaScript",
-      "C++"
-    ]
-  }
-} #}

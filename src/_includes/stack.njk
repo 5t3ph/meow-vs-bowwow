@@ -2,63 +2,26 @@
 layout: base.njk
 ---
 
-<ul>
-  <li>
-    <strong>Author</strong>: {{ author }}
-  </li>
-  <ul>
-    {% for key, value in stack %}
-      <li>
-        {% if loop.last or key === 'stack' or key === 'techStack' %}
-          <strong>{{ key }}:</strong>
-          <ul>
-            {% for layer, technologies in stack[key] %}
-              <li>
-                <strong>{{ layer }}:</strong>
-                {{ technologies | join(", ") }}
-              </li>
+<stack-l space="var(--s3)" class="width:measure">
+  {% for key, value in stack %}
+    {% if key === 'stack' or key === 'techStack' %}
+      {% for layer, technologies in stack[key] %}
+        <div class="docs-toc dashed" aria-labelledby="toc-title">
+          <span aria-hidden="true" id="toc-title">{{layer}}</span>
+          <ul class="horizontal">
+            {% for tech in technologies %}
+              <li>{{tech}}</li>
             {% endfor %}
           </ul>
-        {% else %}
-          <strong>{{ key }}:</strong>
-          {{ value }}
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
-</ul>
+        </div>
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+</stack-l>
 
 {% if pagination.href.previous %}
-<a href="{{pagination.href.previous}}">Previous</a>
+  <a href="{{pagination.href.previous}}">Previous</a>
 {% endif %}
 {% if pagination.href.next %}
-<a href="{{pagination.href.next}}">Next</a>
+  <a href="{{pagination.href.next}}">Next</a>
 {% endif %}
-
-<p>{{ page.date.toUTCString() }}</p>
-
-{# {
-  "title": "Tesla Test",
-  "author": "Sir Elon",
-  "twitter": "toysoldier182",
-  "websiteTitle": "juancarlosasensio.com",
-  "websiteUrl": "https://juancarlosasensio.netlify.app/",
-  "stack": {
-    "interior": [
-      "Aluminum",
-      "Leather"
-    ],
-    "exterior": [
-      "Aluminum",
-      "Glass"
-    ],
-    "power": [
-      "Drive train",
-      "Tesla battery"
-    ],
-    "software": [
-      "JavaScript",
-      "C++"
-    ]
-  }
-} #}

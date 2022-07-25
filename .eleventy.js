@@ -1,5 +1,6 @@
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/css");
+  eleventyConfig.addPassthroughCopy("./src/js");
 
   // Borrowed from the official 11ty site .eleventy.js
   // @link https://github.com/11ty/11ty-website/blob/master/.eleventy.js
