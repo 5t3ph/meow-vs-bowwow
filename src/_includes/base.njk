@@ -11,20 +11,19 @@
   </head>
 
   <body class="page-container">
-    <center-l max="var(--measure)">
-      <stack-l space="var(--s3)" class="content-container">
+    <center-l class="content-container">
+      <stack-l space="var(--s3)">
         {# header... #}
-        <header>
-          <center-l max="var(--measure)" andText gutters>
-            <h1>{{ title }}</h1>
-          </center-l>
+        <header class="text-align:center">
+          <h1>{{ title }}</h1>
         </header>
-        {# horizontally-and-vertically-centered el... #}
+        {# main. #}
         <main>
           {{ content | safe }}
         </main>
       </stack-l>
     </center-l>
+    {# footer... #}
     {% include "footer.njk" %}
     <script src="{{ '/js/main.js' | url }}" type="text/javascript"></script>
   </body>
