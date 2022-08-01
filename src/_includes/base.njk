@@ -11,20 +11,27 @@
   </head>
 
   <body class="page-container">
-    <center-l max="var(--measure)">
-      <stack-l space="var(--s3)" class="content-container">
+    {# TODO: refactor this horrid inline style ↓↓↓... #}
+    <div class="content-container">
+      <stack-l space="var(--s3)">
         {# header... #}
-        <header>
-          <center-l max="var(--measure)" andText gutters>
+        <header class="text-align:center">
+          <stack-l space="var(--s3)">
+            <cluster-l justify="center" align="center" space="var(--s1)">
+              <a href="/">Home</a>
+              <a href="/about">About</a>
+              <a href="/stacks/">View all stacks</a>
+            </cluster-l>
             <h1>{{ title }}</h1>
-          </center-l>
+          </stack-l>
         </header>
-        {# horizontally-and-vertically-centered el... #}
+        {# main. #}
         <main>
           {{ content | safe }}
         </main>
       </stack-l>
-    </center-l>
+    </div>
+    {# footer... #}
     {% include "footer.njk" %}
     <script src="{{ '/js/main.js' | url }}" type="text/javascript"></script>
   </body>

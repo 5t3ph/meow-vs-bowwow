@@ -55,6 +55,7 @@ nav,
 main,
 sidebar-l,
 cover-l,
+center-l,
 footer,
 footer * {
   max-width: none;
@@ -85,6 +86,10 @@ p {
 
 .content-container {
   padding: var(--s3);
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  max-width: var(--measure);
 }
 
 /* Utility classes */
@@ -163,19 +168,19 @@ stack-l {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+
 }
 
 /* How do we contextually add a line between els of a stack-l? */
-/* stack-l.connected > *:not(:last-child):after {
+stack-l.connected > *:not(:last-child):after {
     content: "";
     background-color: #fff;
     position: absolute;
     width: 5px;
-    height: 90%;
-    top: var(--s1) * -1;
+    height: 100%;
     left: 50%;
     display: block;
-} */
+}
 
 /* Box custom el basic styles... */
 box-l {
