@@ -2,10 +2,9 @@
 
 > A community-driven site with tech stacks for all sorts of curious and wonderful things.
 
-Created by Juan Carlos Asensio ([@toysoldier182](https://twitter.com/toysoldier182)), inspired by the ever-amazing Stephanie Eckles ([@5t3ph](https://twitter.com/5t3ph?lang=en))
+Started by Juan Carlos Asensio ([@toysoldier182](https://twitter.com/toysoldier182)), inspired by the ever-amazing Stephanie Eckles ([@5t3ph](https://twitter.com/5t3ph?lang=en)), and hopefully co-created by you (yes, you)!
 
 ## Add Your Stack
-
 Submit your `techStack` by creating a pull request that includes a new `.json` file named after the project/product/thing for which you're creating a stack in the appropriate directory:
 
 ```bash
