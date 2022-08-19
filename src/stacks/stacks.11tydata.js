@@ -1,6 +1,6 @@
 let data = {
   "tags": ["stacks", "stack"],
-  "date": ""
+  "date": "",
 };
 
 if (process.env.NODE_ENV === "production") {

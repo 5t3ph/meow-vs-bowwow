@@ -1,15 +1,14 @@
 ---
 layout: base.njk
 title: Planet Stacks
+showStackPartialTitle: true
 ---
 
 <article>
-  <stack-l space="var(--s3)" class="text-align:center">
-    <h2>⚡️ Weekly Highlight ⚡️</h2>
+  <stack-l space="var(--s3)">
+    <h2 class="text-align:center">⚡️ Weekly Highlight ⚡️</h2>
     {% for stack in stacks | randomItem %}
-      <a href="/stacks/{{ stack.title | slug }}/">
-        <h4>{{ stack.title }}</h4>
-      </a>
+      {% include "_stack.njk" %}
     {% endfor %}
   </stack-l>
 </article>

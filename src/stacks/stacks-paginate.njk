@@ -9,6 +9,16 @@ eleventyComputed:
   twitter: "{{ stack.twitter }}"
   websiteTitle: "{{ stack.websiteTitle }}"
   websiteUrl: "{{ stack.websiteUrl }}"
-layout: stack.njk
 permalink: "/stacks/{{ stack.title | slug }}/"
+showStackPartialTitle: false
 ---
+
+{% extends "base.njk" %}
+{% block content %}
+  {% include "_stack.njk" %}
+  {{ content | safe }}
+{% endblock %}
+
+{% block pagination_nav %}
+  {% include "_pagination_nav.njk" %}
+{% endblock %}

@@ -14,24 +14,18 @@
     <div class="content-container">
       <stack-l space="var(--s3)">
         {# header... #}
-        <header class="text-align:center">
-          <stack-l space="var(--s3)">
-            <cluster-l justify="center" align="center" space="var(--s1)">
-              <a href="/">Home</a>
-              <a href="/about">About</a>
-              <a href="/stacks/">View all stacks</a>
-            </cluster-l>
-            <h1>{{ title }}</h1>
-          </stack-l>
-        </header>
+        {% include "_header.njk" %}
         {# main... #}
         <main>
-          {{ content | safe }}
+          {% block content %}
+            {{ content | safe }}
+          {% endblock %}
+          {% block pagination_nav %}{% endblock %}
         </main>
       </stack-l>
     </div>
     {# footer... #}
-    {% include "footer.njk" %}
+    {% include "_footer.njk" %}
     <script src="{{ '/js/main.js' | url }}" type="text/javascript"></script>
   </body>
 </html>
