@@ -1,0 +1,51 @@
+{
+  "title": "FPV Drone Stack",
+  "author": "Carlos Charlie",
+  "twitter": "carloscharlie",
+  "websiteTitle": "carloscharlie.com",
+  "websiteUrl": "https://stevebillwoz.netlify.app/",
+  "techStack": {
+    "Frame": [
+      "The main body of your drone"
+    ],
+    "Motor": [
+      "The powerhouse gives the FVP drone the ability to reach speed"
+    ],
+    "Fight controller": [
+      "The brain of your drone which sends signals to the ESC"
+    ],
+    "Electronic Controller (ESC)": [
+      "Produces the three-phase AC which drives the motor"
+    ],
+    "Camera": [
+      "The eye of your drone"
+    ],
+    "The Distribution Board (PDB)": [
+      "Connects all electronics by taking battery voltage"
+    ],
+    "Vtx Transmitter": [
+      "Takes signals from the camera and sends them out through the antenna"
+    ],
+    "Goggles": [
+      "Your vision of the drone"
+    ],
+    "Vtx": [
+      "improves video range and clarity by having two antennas, one to send out the video and another to receive it"
+    ],
+    "Receiver": [
+      "The control of your drone"
+    ],
+    "Propellers": [
+      "The source of movement for your drone"
+    ],
+    "Batteries": [
+      "The source of electric power for your drone"
+    ],
+    "Battery": [
+      "Specialist charger for the batteries"
+    ],
+    "Battery straps": [
+      "Holds your batteries firmly to your drone"
+    ]
+  }
+}
