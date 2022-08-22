@@ -176,8 +176,8 @@ stack-l.connected > *:not(:last-child):after {
     content: "";
     background-color: #fff;
     position: absolute;
-    width: 5px;
-    height: 100%;
+    width: calc(var(--border-thin) * 0.60);
+    min-height: 75%;
     left: 50%;
     display: block;
 }
@@ -794,7 +794,7 @@ pre {
 }
 
 .docs-toc.dashed {
-  border-width: var(--border-thin);
+  border-width: calc(var(--border-thin) * 0.75);
   border-style: dashed;
 }
 
