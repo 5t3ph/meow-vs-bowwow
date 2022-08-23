@@ -6,7 +6,16 @@ showStackPartialTitle: true
 
 <article>
   <stack-l space="var(--s3)">
-    <h2 class="text-align:center">⚡️ Weekly Highlight ⚡️</h2>
+    <h2 class="text-align:center">
+      <switcher-l 
+        threshold="30rem" space="var(--s0)" limit=3
+        style="display: flex; align-items: center; justify-content: center;"
+       >
+        <span>⚡️</span>
+        <span>Weekly Highlight</span>
+        <span>⚡️</span>
+      </switcher-l>
+    </h2>
     {% for stack in stacks | randomItem %}
       {% include "_stack.njk" %}
     {% endfor %}
