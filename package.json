@@ -1,22 +1,20 @@
 {
-  "name": "11ty-basics",
+  "name": "planet-stacks",
   "version": "1.0.0",
-  "description": "An example of essential and suggested 11ty features for creating a community-driven site.",
+  "description": "Essential technologies to make the planet tick.",
   "main": "index.js",
   "scripts": {
-    "develop": "eleventy --serve",
-    "build": "eleventy"
+    "dev": "npx @11ty/eleventy --serve",
+    "build": "NODE_ENV=production npx @11ty/eleventy"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/5t3ph/11ty-basics.git"
+    "url": "git+https://github.com/juancarlosasensio/planet-stack.git"
   },
-  "author": "5t3ph",
+  "author": "Juan Carlos Asensio",
   "license": "ISC",
-  "dependencies": {
-    "@11ty/eleventy": "^0.11.0"
-  },
   "devDependencies": {
+    "@11ty/eleventy": "^1.0.1",
     "fast-glob": "^3.2.4"
   }
 }

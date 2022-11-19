@@ -1,26 +1,40 @@
-## Add Your Dog or Cat
+## Add Your Stack
 
-To submit your pet, create pull request with that includes a new `.json` file named after your pet in the appropriate directory, either `cats` or `dogs`:
+Submit your `techStack` by creating a pull request that includes a new `.json` file named after the project/product for which you're creating a stack in the appropriate directory:
 
 ```bash
 src/
-  pets/
-	  cats/
-		dogs/
+  _data_/
+    stacks/
 ```
 
-The `json` file contents should follow the schema below. You must provide a full URL to the photo of your pet as image uploads will not be accepted.
+The `json` file contents should follow the pattern/schema below with the appropriate required fields (values for the `techStack` field are just an example).
 
 ```json
 {
   // Required
-  "name": "Fluffy",
-  "petColor": "orange",
-  "photoURL": "http://placekitten.com/320",
-  "ownerName": "Bob",
+  "title": "Tesla Test",
+  "author": "Melon Lust",
+  "techStack": {
+    "interior": [
+      "Aluminum",
+      "Leather"
+    ],
+    "exterior": [
+      "Aluminum",
+      "Glass"
+    ],
+    "power": [
+      "Drive train",
+      "Tesla battery"
+    ],
+    "software": [
+      "JavaScript",
+      "C++"
+    ]
+  }, 
   // Optional
-  "favoriteFood": "FancyFeast",
-  "favoriteToy": "squeaky mouse",
-  "ownerTwitter": "#"
+  "twitter": "SqueakyMuskrat",
+  "websiteUrl": "https://www.squeakymuskrat.com"
 }
 ```

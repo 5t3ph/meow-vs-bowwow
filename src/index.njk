@@ -1,53 +1,15 @@
 ---
 layout: base.njk
-title: 😺 Meow vs. BowWow 🐶
+title: Planet Stacks
 ---
 
-<article class="battle">
-  <h2>⚡️ Weekly Battle ⚡️</h2>
-
-  <div class="columns">
-    <figure>
-      {% for cat in cats | randomPet %}
-      <a href="/cats/{{ cat.name | slug }}/"
-        ><img alt="" src="{{ cat.photoURL }}" height="300"
-      /></a>
-      <figcaption>{{ cat.name }}</figcaption>
-      {% endfor %}
-    </figure>
-    <figure>
-      {% for dog in dogs | randomPet %}
-      <a href="/dogs/{{ dog.name | slug }}/"
-        ><img alt="" src="{{ dog.photoURL }}" height="300"
-      /></a>
-      <figcaption>{{ dog.name }}</figcaption>
-      {% endfor %}
-    </figure>
-  </div>
+<article>
+  <stack-l space="var(--s3)" class="text-align:center">
+    <h2>⚡️ Weekly Highlight ⚡️</h2>
+    {% for stack in stacks | randomItem %}
+      <a href="/stacks/{{ stack.title | slug }}/">
+        <h4>{{ stack.title }}</h4>
+      </a>
+    {% endfor %}
+  </stack-l>
 </article>
-
-<aside class="columns">
-  <div>
-    <h3>All Cats</h3>
-
-    <ul>
-      {% for cat in cats %}
-      <li>
-        <a href="/cats/{{ cat.name | slug }}/">{{ cat.name }}</a>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-
-  <div>
-    <h3>All Dogs</h3>
-
-    <ul>
-      {% for dog in dogs %}
-      <li>
-        <a href="/dogs/{{ dog.name | slug }}/">{{ dog.name }}</a>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-</aside>

@@ -1,27 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{{ title }}</title>
-	<link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="/css/style.css" />
-</head>
-<body>
-	<header>
-		<h1>{{ title }}</h1>
-		{% if page.url !== '/' %}
-		<h2><a href="/">😺 Meow vs. BowWow 🐶</a></h2>
-		{% endif %}
-	</header>
-	<main>
-	{{ content | safe }}
-	</main>
-	<footer>
-		<div class="container">
-			<h4>Add Your Pet!</h4>
-			<p>Learn how to contribute your pet by <a href="https://github.com/5t3ph/meow-vs-bowwow">visiting the repo ></a></p>
-		</div>
-	</footer>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/variables.css"/>
+    <link rel="stylesheet" href="/css/utilities.css"/>
+    <link rel="stylesheet" href="/css/styles.css"/>
+  </head>
+
+  <body class="page-container">
+    {# TODO: refactor this horrid inline style ↓↓↓... #}
+    <div class="content-container">
+      <stack-l space="var(--s3)">
+        {# header... #}
+        <header class="text-align:center">
+          <stack-l space="var(--s3)">
+            <cluster-l justify="center" align="center" space="var(--s1)">
+              <a href="/">Home</a>
+              <a href="/about">About</a>
+              <a href="/stacks/">View all stacks</a>
+            </cluster-l>
+            <h1>{{ title }}</h1>
+          </stack-l>
+        </header>
+        {# main. #}
+        <main>
+          {{ content | safe }}
+        </main>
+      </stack-l>
+    </div>
+    {# footer... #}
+    {% include "footer.njk" %}
+    <script src="{{ '/js/main.js' | url }}" type="text/javascript"></script>
+  </body>
 </html>

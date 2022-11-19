@@ -1,0 +1,26 @@
+{
+  "title": "Mobile Phone Test",
+  "author": "Billy Gateway",
+  "twitter": "billybill",
+  "websiteTitle": "billybill.com",
+  "websiteUrl": "https://billybill.app/",
+  "techStack": {
+    "processing": [
+      "Micro miniprocessor"
+    ],
+    "storage": [
+      "FLASH drive",
+      "AMD pro"
+    ],
+    "display": [
+      "Touch Screen"
+    ],
+    "inputs": [
+      "Touch Screen",
+      "Siri"
+    ],
+    "software": [
+      "iOS"
+    ]
+  }
+}

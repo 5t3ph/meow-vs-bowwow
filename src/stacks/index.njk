@@ -1,0 +1,15 @@
+---
+layout: base.njk
+title: All Stacks
+eleventyExcludeFromCollections: true
+---
+
+<article>
+  <ul>
+    {% for stack in stacks %}
+      <li>
+        <a href="{{stack.title | slug}}">{{stack.title}}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</article>

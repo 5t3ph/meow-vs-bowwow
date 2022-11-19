@@ -1,0 +1,34 @@
+---
+layout: base.njk
+---
+
+<stack-l space="var(--s3)">
+  <stack-l space="var(--s3)" class="connected">
+    {% for key, value in stack %}
+      {% if key === 'stack' or key === 'techStack' %}
+        {% for layer, technologies in stack[key] %}
+          <div class="docs-toc dashed" aria-labelledby="toc-title">
+            <span aria-hidden="true" id="toc-title">{{layer}}</span>
+            <ul class="horizontal">
+              {% for tech in technologies %}
+                <li>{{tech}}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  </stack-l>
+  <div>
+    <cluster-l justify="space-between" align="center">
+      <div>
+        {% if pagination.href.previous %}
+          <a href="{{pagination.href.previous}}">Previous</a>
+        {% endif %}
+      </div>
+      {% if pagination.href.next %}
+        <a href="{{pagination.href.next}}">Next</a>
+      {% endif %}
+    </cluster-l>
+  </div>
+</stack-l>
